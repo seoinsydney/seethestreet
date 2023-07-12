@@ -1,14 +1,12 @@
 import { motion, AnimatePresence, useInView, useAnimation } from "framer-motion"
 import { useRef, useEffect} from 'react';
+import styles from '@/styles/components.module.scss'
 
-
-const MotionLayout = ({children}) => {
+const FastMotionLayout = ({children, delaySpeed}) => {
 
     const ref = useRef(null)
     const isInView = useInView(ref, { once: true });
-
     const mainControls = useAnimation();
-
     useEffect (()=> {
         if (isInView) {
             mainControls.start("visible");
@@ -26,7 +24,8 @@ const MotionLayout = ({children}) => {
                 initial="hidden"
                 animate={mainControls}
                 exit={{ opacity: 0, y: 15}}
-                transition={{ delay: 0.5, duration: 0.5 }}
+                transition={{ delay: delaySpeed, duration: 0.5 }}
+                className={styles.motionLayout}
                 >
                 {children}
             </motion.div>
@@ -34,4 +33,4 @@ const MotionLayout = ({children}) => {
     );
   };
   
-  export default MotionLayout;
+  export default FastMotionLayout;

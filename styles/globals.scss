@@ -2,33 +2,45 @@
     margin: 0;
     padding: 0;
 }
-
 h1 {
     font-size: 38px;
+    font-weight: 200;
     margin: 20px 0;
+    text-transform: uppercase;
 }
 h2 {
     font-size: 32px;
+    font-weight: 200;
     margin: 20px 0;
+    text-transform: capitalize;
 }
 h3 {
-    font-size: 28px;
+    font-family: system-ui;
+    font-size: 24px;
+    font-weight: 400;
     margin: 20px 0;
+    text-transform: capitalize;
 }
 h4 {
-    font-size: 24px;
+    font-family: system-ui;
+    font-size: 22px;
     margin: 20px 0;
 }
 h5 {
+    font-family: system-ui;
     font-size: 20px;
     margin: 20px 0;
 }
 h6 {
+    font-family: system-ui;
     font-size: 16px;
+    color: #7e7e7e;
 }
 p {
+    font-family: system-ui;
     font-size: 18px;
     margin: 20px 0;
+    color: #464646;
 }
 a {
     font-size: 18px;
@@ -38,5 +50,10 @@ a {
 img {
     width: 100%;
     object-fit: cover;
+    background-color: #000;
     filter: grayscale(100%);
+    transition: .3s;
+    &:hover {
+    filter: grayscale(0%);
+    }
 }
