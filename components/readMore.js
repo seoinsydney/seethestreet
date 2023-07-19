@@ -1,20 +1,12 @@
-import { motion } from 'framer-motion';
 import styles from '@/styles/components.module.scss'
 
-const ReadMore = ({link}) => {
+const ReadMore = ({link, text}) => {
   return (
-    <motion.div
-      whileHover={{
-        scale: 1.3,
-        transition: { duration: .3 },
-      }}
-      whileTap={{ scale: 0.8 }}
-      className={styles.readMore}
-    >
+    <div className={styles.readMore}>
       <a href={link}>
-          READ MORE
+          {text}
       </a>
-    </motion.div>
+    </div>
   );
 };
 

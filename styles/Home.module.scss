@@ -7,8 +7,12 @@
     .blackBox {
         width: 100%;
         max-width: 500px;
-        height: 500px;
+        height:  380px;
         background-color: #000;
+        img {
+            width: 100%;
+
+        }
     }
     .paintBg {
         width: 100%;
@@ -98,8 +102,7 @@
             margin: 40px 20px 0 10px; 
         }
         img {
-            max-width: 150px;
-            height: 150px;
+            height: inherit;
             margin-bottom: 20px;
         }
     }
