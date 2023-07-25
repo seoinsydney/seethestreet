@@ -25,7 +25,6 @@ const FastMotionLayout = ({children, delaySpeed}) => {
                 animate={mainControls}
                 exit={{ opacity: 0, y: 15}}
                 transition={{ delay: delaySpeed, duration: 0.5 }}
-                className={styles.motionLayout}
                 >
                 {children}
             </motion.div>

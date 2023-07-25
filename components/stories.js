@@ -6,19 +6,26 @@ const StoriesBehind = () => {
   return (
     <div className={styles.stories}>
       <div className={styles.paintBg}></div>
-      <FastMotionLayout delaySpeed={0.5}>
-        <Grid container spacing={1}>
+        <Grid container mt={12}>
           <Grid item xs={12} sm={12} md={12} lg={12}>
-            <h2>STORIES BEHIND IMAGES</h2>
+            <h2>stories behind images</h2>
           </Grid>
-          <Grid item xs={12} sm={6} md={3} lg={3}>
-            <div><img src="./pexels-photo-6274712.webp" alt="image" /></div>
+          <Grid item xs={12} sm={6} md={4} lg={4}>
+            <FastMotionLayout delaySpeed={0.5}>
+            <img src="./pexels-photo-6274712.webp" alt="image" />
+            </FastMotionLayout>
           </Grid>
-          <Grid item xs={12} sm={6} md={3} lg={3}>
+          <Grid item xs={12} sm={6} md={4} lg={4}>
+          <FastMotionLayout delaySpeed={0.6}>
             <img src="./pexels-photo-1499327.jpeg" alt="image" />
+            </FastMotionLayout>
+          </Grid>
+          <Grid item xs={12} sm={6} md={4} lg={4}>
+            <FastMotionLayout delaySpeed={0.7}>
+              <img src="./pexels-photo-1499327.jpeg" alt="image" />
+            </FastMotionLayout>
           </Grid>
         </Grid>
-      </FastMotionLayout>
     </div>
   );
 };
